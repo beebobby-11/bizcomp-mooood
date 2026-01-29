@@ -1,161 +1,29 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Ambitious Mood | Bizcomp x Mooood</title>
-    <link rel="stylesheet" href="styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bizcomp x Mooood</title>
+    <meta name="description" content="Discover your personality and find your perfect Mooood match!" />
+    <meta name="author" content="Bizcomp x Mooood" />
+
+    <meta property="og:title" content="Bizcomp x Mooood - Find Your Mooood" />
+    <meta property="og:description" content="Take the quiz to discover your personality type and get matched with your perfect Mooood snack!" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@Bizcomp" />
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    
+    <!-- Playful childish fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Work+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-</head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="bizcomp-logo">BIZCOMP</div>
-            <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#collaboration">Collaboration</a>
-            </div>
-        </div>
-    </nav>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  </head>
 
-    <!-- Step 1: Editorial Landing -->
-    <section id="step1" class="step active">
-        <div class="landing-container">
-            <div class="hero-content">
-                <div class="headline-wrapper">
-                    <h1 class="mega-headline">THE<br>AMBITIOUS<br>MOOD.</h1>
-                    <div class="circular-graphic"></div>
-                </div>
-                <p class="subheadline">Elevate your executive lifestyle with precision nutrition</p>
-                <button class="cta-button primary" onclick="nextStep()">START YOUR CONSULTATION</button>
-            </div>
-            <div class="hero-image">
-                <div class="product-showcase">
-                    <div class="product-card"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Step 2: Synergy Statement -->
-    <section id="step2" class="step">
-        <div class="synergy-container">
-            <div class="synergy-header">
-                <h2 class="section-title">The Synergy</h2>
-                <p class="synergy-tagline">
-                    <span class="navy-text">Mind by Bizcomp.</span>
-                    <span class="pink-text">Energy by Mooood.</span>
-                </p>
-            </div>
-            
-            <div class="collaborative-wall">
-                <div class="wall-card card-1">
-                    <h3>Strategic Thinking</h3>
-                    <p>High-performance nutrition for analytical minds</p>
-                </div>
-                <div class="wall-card card-2">
-                    <h3>Executive Energy</h3>
-                    <p>Sustained focus for ambitious professionals</p>
-                </div>
-                <div class="wall-card card-3">
-                    <h3>Lifestyle Optimization</h3>
-                    <p>Premium fuel for peak performance</p>
-                </div>
-                <div class="wall-card card-4">
-                    <h3>Professional Excellence</h3>
-                    <p>Curated nutrition for modern leaders</p>
-                </div>
-            </div>
-
-            <button class="cta-button secondary" onclick="nextStep()">DISCOVER YOUR PROFILE</button>
-        </div>
-    </section>
-
-    <!-- Step 3: Personality Quiz -->
-    <section id="step3" class="step">
-        <div class="quiz-container">
-            <div class="quiz-progress">
-                <span class="progress-text">Question <span id="currentQ">1</span> of 5</span>
-                <div class="progress-bar">
-                    <div class="progress-fill" id="progressFill"></div>
-                </div>
-            </div>
-
-            <div class="quiz-content">
-                <h2 class="quiz-question" id="quizQuestion">How do you approach complex challenges?</h2>
-                
-                <div class="quiz-answers" id="quizAnswers">
-                    <!-- Answers will be populated by JavaScript -->
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Step 4: Profile Reveal -->
-    <section id="step4" class="step">
-        <div class="profile-container">
-            <div class="profile-card">
-                <span class="profile-label">YOUR EXECUTIVE PROFILE</span>
-                <h1 class="profile-persona" id="profilePersona">THE STRATEGIST</h1>
-                
-                <div class="profile-description">
-                    <p id="profileDesc">You excel at long-term planning and analytical thinking. Your systematic approach to problem-solving requires sustained mental energy and strategic focus.</p>
-                </div>
-
-                <div class="product-pairing">
-                    <div class="pairing-image"></div>
-                    <div class="pairing-content">
-                        <h3>YOUR OPTIMAL FUEL</h3>
-                        <h2 id="productName">Bicep Berry Protein Ball</h2>
-                        <p id="productDesc">15g plant-based protein. Designed to fuel strategic thinking and sustained cognitive performance.</p>
-                        <div class="nutrition-highlights">
-                            <span class="highlight">High Protein</span>
-                            <span class="highlight">Sustained Energy</span>
-                            <span class="highlight">Focus Enhancement</span>
-                        </div>
-                    </div>
-                </div>
-
-                <button class="cta-button primary" onclick="nextStep()">CLAIM YOUR PROFILE</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Step 5: Event RSVP -->
-    <section id="step5" class="step">
-        <div class="event-container">
-            <div class="event-content">
-                <span class="event-label">EXCLUSIVE INVITATION</span>
-                <h1 class="event-title">BIZCOMP<br>SHOWCASE<br>2026</h1>
-                
-                <div class="event-details">
-                    <div class="detail-item">
-                        <span class="detail-label">DATE</span>
-                        <span class="detail-value">January 2026</span>
-                    </div>
-                    <div class="detail-item">
-                        <span class="detail-label">EXPERIENCE</span>
-                        <span class="detail-value">Executive Networking & Mooood Tasting</span>
-                    </div>
-                    <div class="detail-item">
-                        <span class="detail-label">ACCESS</span>
-                        <span class="detail-value">VIP Members Only</span>
-                    </div>
-                </div>
-
-                <div class="rsvp-form">
-                    <input type="email" placeholder="Your Email Address" class="rsvp-input">
-                    <button class="cta-button vip">RSVP NOW</button>
-                </div>
-
-                <p class="event-note">Limited capacity. Priority given to personality profile members.</p>
-            </div>
-        </div>
-    </section>
-
-    <script src="script.js"></script>
-</body>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
