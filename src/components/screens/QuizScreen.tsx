@@ -227,7 +227,17 @@ const QuizScreen = ({ onComplete }: QuizScreenProps) => {
       </div>
 
       {/* Question content */}
-      <div className="flex-1 container mx-auto px-6 flex flex-col justify-center py-8">
+      <div className="flex-1 container mx-auto px-6 flex flex-col justify-center py-8 relative">
+        {/* Zen character on the right side - visible for all questions */}
+        <motion.img
+          src={zenImg}
+          alt=""
+          className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 w-48 lg:w-64 xl:w-80 opacity-90 drop-shadow-2xl"
+          initial={{ opacity: 0, x: 100 }}
+          animate={{ opacity: 0.9, x: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        />
+        
         <AnimatePresence mode="wait">
           <motion.div
             key={question.id}
