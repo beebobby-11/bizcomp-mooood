@@ -167,7 +167,7 @@ const QuizScreen = ({ onComplete }: QuizScreenProps) => {
         <motion.img
           src={jollyImg}
           alt=""
-          className="absolute -top-16 -left-16 w-56 md:w-72 opacity-12 blur-[1px]"
+          className="absolute -top-20 -left-20 w-48 md:w-60 opacity-12 blur-[1px]"
           animate={{ y: [0, -8, 0], scale: [1, 1.02, 1] }}
           transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
         />
@@ -176,7 +176,7 @@ const QuizScreen = ({ onComplete }: QuizScreenProps) => {
         <motion.img
           src={museImg}
           alt=""
-          className="absolute -top-14 -right-16 w-56 md:w-72 opacity-12 blur-[1px]"
+          className="absolute -top-18 -right-20 w-48 md:w-60 opacity-12 blur-[1px]"
           animate={{ y: [0, -6, 0], scale: [1, 1.01, 1] }}
           transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}
         />
@@ -185,7 +185,7 @@ const QuizScreen = ({ onComplete }: QuizScreenProps) => {
         <motion.img
           src={champyImg}
           alt=""
-          className="absolute top-1/3 -right-20 w-48 md:w-64 opacity-12 blur-[1px]"
+          className="absolute top-1/3 -right-24 w-40 md:w-52 opacity-12 blur-[1px]"
           animate={{ y: [0, -5, 0], rotate: [0, 2, 0] }}
           transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
         />
@@ -194,7 +194,7 @@ const QuizScreen = ({ onComplete }: QuizScreenProps) => {
         <motion.img
           src={serenyImg}
           alt=""
-          className="absolute bottom-16 -left-18 w-48 md:w-64 opacity-12 blur-[1px]"
+          className="absolute bottom-20 -left-22 w-40 md:w-52 opacity-12 blur-[1px]"
           animate={{ y: [0, -6, 0], rotate: [0, -2, 0] }}
           transition={{ duration: 7.5, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
         />
@@ -203,7 +203,7 @@ const QuizScreen = ({ onComplete }: QuizScreenProps) => {
         <motion.img
           src={zenImg}
           alt=""
-          className="absolute bottom-12 -right-18 w-48 md:w-64 opacity-12 blur-[1px]"
+          className="absolute bottom-16 -right-22 w-40 md:w-52 opacity-12 blur-[1px]"
           animate={{ y: [0, -4, 0], scale: [1, 1.01, 1] }}
           transition={{ duration: 9, repeat: Infinity, ease: "easeInOut", delay: 2 }}
         />
