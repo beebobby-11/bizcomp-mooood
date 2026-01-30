@@ -2,13 +2,6 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import type { QuizAnswer, CharacterType } from '@/pages/Index';
 
-// Import transparent character SVGs for background
-import jollyImg from '@/assets/characters/jolly11.png';
-import museImg from '@/assets/characters/muse11.png';
-import serenyImg from '@/assets/characters/seceny11.png';
-import zenImg from '@/assets/characters/zen11.png';
-import champyImg from '@/assets/characters/champy11.png';
-
 interface QuizScreenProps {
   onComplete: (answers: QuizAnswer[]) => void;
 }
