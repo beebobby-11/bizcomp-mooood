@@ -161,53 +161,7 @@ const QuizScreen = ({ onComplete }: QuizScreenProps) => {
         />
       </div>
 
-      {/* Atmospheric background characters - EXTRA BIG, subtle */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {/* Jolly - Top Left */}
-        <motion.img
-          src={jollyImg}
-          alt=""
-          className="absolute -top-20 -left-20 w-48 md:w-60 opacity-12 blur-[1px]"
-          animate={{ y: [0, -8, 0], scale: [1, 1.02, 1] }}
-          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-        />
-        
-        {/* Muse - Top Right */}
-        <motion.img
-          src={museImg}
-          alt=""
-          className="absolute -top-18 -right-20 w-48 md:w-60 opacity-12 blur-[1px]"
-          animate={{ y: [0, -6, 0], scale: [1, 1.01, 1] }}
-          transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-        />
-        
-        {/* Champy - Middle Right */}
-        <motion.img
-          src={champyImg}
-          alt=""
-          className="absolute top-1/3 -right-24 w-40 md:w-52 opacity-12 blur-[1px]"
-          animate={{ y: [0, -5, 0], rotate: [0, 2, 0] }}
-          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-        />
-        
-        {/* Sereny - Bottom Left */}
-        <motion.img
-          src={serenyImg}
-          alt=""
-          className="absolute bottom-20 -left-22 w-40 md:w-52 opacity-12 blur-[1px]"
-          animate={{ y: [0, -6, 0], rotate: [0, -2, 0] }}
-          transition={{ duration: 7.5, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
-        />
-        
-        {/* Zen - Bottom Right */}
-        <motion.img
-          src={zenImg}
-          alt=""
-          className="absolute bottom-16 -right-22 w-40 md:w-52 opacity-12 blur-[1px]"
-          animate={{ y: [0, -4, 0], scale: [1, 1.01, 1] }}
-          transition={{ duration: 9, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-        />
-      </div>
+      {/* Atmospheric background characters - removed to focus on main Zen character */}
 
       {/* Progress bar */}
       <div className="fixed top-0 left-0 right-0 h-2 bg-muted/50 z-50">
