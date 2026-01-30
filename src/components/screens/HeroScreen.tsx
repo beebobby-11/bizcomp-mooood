@@ -2,11 +2,11 @@ import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
 
 // Import transparent character SVGs
-import jollyImg from '@/assets/characters/jolly1.jpg';
-import museImg from '@/assets/characters/muse-transparent.png';
-import serenyImg from '@/assets/characters/seceny.jpg';
-import zenImg from '@/assets/characters/zen1.png';
-import champyImg from '@/assets/characters/champy-1.png';
+import jollyImg from '@/assets/characters/jolly11.png';
+import museImg from '@/assets/characters/muse11.png';
+import serenyImg from '@/assets/characters/seceny11.png';
+import zenImg from '@/assets/characters/zen11.png';
+import champyImg from '@/assets/characters/champy11.png';
 
 interface HeroScreenProps {
   onStart: () => void;
