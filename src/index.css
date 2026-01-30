@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Remove white background from character images */
+@layer utilities {
+  .character-transparent {
+    mix-blend-mode: multiply;
+  }
+  
+  /* For dark backgrounds, use screen mode instead */
+  .character-transparent-dark {
+    mix-blend-mode: screen;
+  }
+}
+
 @layer base {
   :root {
     /* Bizcomp Pink Pastel Theme - inspired by reference */

@@ -79,7 +79,7 @@ const HeroScreen = ({ onStart }: HeroScreenProps) => {
           <motion.img
             src={jollyImg}
             alt="Jolly - The Outgoing One"
-            className="w-full h-auto drop-shadow-lg"
+            className="w-full h-auto drop-shadow-lg character-transparent"
             animate={{ y: [0, -8, 0], rotate: [-12, -8, -12] }}
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
           />
@@ -95,7 +95,7 @@ const HeroScreen = ({ onStart }: HeroScreenProps) => {
           <motion.img
             src={museImg}
             alt="Muse - The Creative One"
-            className="w-full h-auto drop-shadow-lg"
+            className="w-full h-auto drop-shadow-lg character-transparent"
             animate={{ y: [0, -10, 0], rotate: [10, 14, 10] }}
             transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
           />
@@ -111,7 +111,7 @@ const HeroScreen = ({ onStart }: HeroScreenProps) => {
           <motion.img
             src={champyImg}
             alt="Champy - The Achiever"
-            className="w-full h-auto drop-shadow-lg"
+            className="w-full h-auto drop-shadow-lg character-transparent"
             animate={{ y: [0, -6, 0], rotate: [5, 8, 5] }}
             transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
           />
@@ -127,7 +127,7 @@ const HeroScreen = ({ onStart }: HeroScreenProps) => {
           <motion.img
             src={serenyImg}
             alt="Sereny - The Empathetic One"
-            className="w-full h-auto drop-shadow-lg"
+            className="w-full h-auto drop-shadow-lg character-transparent"
             animate={{ y: [0, -8, 0], rotate: [-8, -5, -8] }}
             transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}
           />
@@ -143,7 +143,7 @@ const HeroScreen = ({ onStart }: HeroScreenProps) => {
           <motion.img
             src={zenImg}
             alt="Zen - The Calm One"
-            className="w-full h-auto drop-shadow-lg"
+            className="w-full h-auto drop-shadow-lg character-transparent"
             animate={{ y: [0, -5, 0], rotate: [8, 12, 8] }}
             transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 1.2 }}
           />
