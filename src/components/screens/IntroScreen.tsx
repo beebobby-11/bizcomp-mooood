@@ -2,11 +2,11 @@ import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
 
 // Import transparent character SVGs
-import jollyImg from '@/assets/characters/jolly-transparent.svg';
-import museImg from '@/assets/characters/muse-transparent.svg';
-import serenyImg from '@/assets/characters/sereny-transparent.svg';
-import zenImg from '@/assets/characters/zen-transparent.svg';
-import champyImg from '@/assets/characters/champy-transparent.svg';
+import jollyImg from '@/assets/characters/jolly1.jpg';
+import museImg from '@/assets/characters/muse-transparent.png';
+import serenyImg from '@/assets/characters/seceny.jpg';
+import zenImg from '@/assets/characters/zen1.png';
+import champyImg from '@/assets/characters/champy-1.png';
 
 interface IntroScreenProps {
   onContinue: () => void;
