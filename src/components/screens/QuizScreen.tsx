@@ -121,48 +121,6 @@ const QuizScreen = ({ onComplete }: QuizScreenProps) => {
 
   return (
     <div className="min-h-screen relative flex flex-col bg-gradient-to-b from-background via-soft-pink/20 to-background">
-      {/* Decorative geometric shapes - character colors, subtle */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {/* Yellow circle - Jolly - top left */}
-        <motion.div 
-          className="absolute top-[8%] left-[8%] w-12 h-12 md:w-16 md:h-16 bg-char-outgoing/20 rounded-full blur-[1px]"
-          animate={{ scale: [1, 1.1, 1] }}
-          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-        />
-        {/* Pink square - Muse - top right */}
-        <motion.div 
-          className="absolute top-[10%] right-[10%] w-10 h-10 md:w-14 md:h-14 bg-char-creative/18 rounded-xl rotate-12 blur-[1px]"
-          animate={{ rotate: [12, 18, 12] }}
-          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-        />
-        {/* Green circle - Sereny - bottom left */}
-        <motion.div 
-          className="absolute bottom-[20%] left-[12%] w-10 h-10 md:w-14 md:h-14 bg-char-empathetic/20 rounded-full blur-[1px]"
-          animate={{ y: [0, -6, 0] }}
-          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-        />
-        {/* Peach oval - Zen - right side */}
-        <motion.div 
-          className="absolute top-[50%] right-[8%] w-8 h-12 md:w-10 md:h-16 bg-char-calm/22 rounded-full blur-[1px]"
-          animate={{ scale: [1, 1.08, 1] }}
-          transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-        />
-        {/* Purple square - Champy - bottom right */}
-        <motion.div 
-          className="absolute bottom-[25%] right-[15%] w-10 h-10 md:w-14 md:h-14 bg-char-achiever/18 rounded-lg rotate-6 blur-[1px]"
-          animate={{ rotate: [6, 12, 6] }}
-          transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}
-        />
-        {/* Small yellow - bottom center */}
-        <motion.div 
-          className="absolute bottom-[35%] left-[40%] w-6 h-6 md:w-10 md:h-10 bg-char-outgoing/15 rounded-lg rotate-45 blur-[1px]"
-          animate={{ rotate: [45, 55, 45] }}
-          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-        />
-      </div>
-
-      {/* Atmospheric background characters - removed to focus on main Zen character */}
-
       {/* Progress bar */}
       <div className="fixed top-0 left-0 right-0 h-2 bg-muted/50 z-50">
         <motion.div
@@ -181,17 +139,7 @@ const QuizScreen = ({ onComplete }: QuizScreenProps) => {
       </div>
 
       {/* Question content */}
-      <div className="flex-1 container mx-auto px-6 flex flex-col justify-center py-8 relative">
-        {/* Zen character on the right side - visible for all questions */}
-        <motion.img
-          src={zenImg}
-          alt=""
-          className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 w-48 lg:w-64 xl:w-80 opacity-90 drop-shadow-2xl"
-          initial={{ opacity: 0, x: 100 }}
-          animate={{ opacity: 0.9, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-        />
-        
+      <div className="flex-1 container mx-auto px-6 flex flex-col justify-center py-8">
         <AnimatePresence mode="wait">
           <motion.div
             key={question.id}
