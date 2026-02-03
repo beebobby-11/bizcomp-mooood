@@ -19,57 +19,49 @@ const HeroScreen = ({ onStart }: HeroScreenProps) => {
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         {/* Yellow circle - Jolly color - top left */}
         <motion.div 
-          className="absolute top-[8%] left-[8%] w-16 h-16 md:w-24 md:h-24 rounded-full"
-          style={{ backgroundColor: 'rgba(232, 124, 77, 0.4)' }}
+          className="absolute top-[8%] left-[8%] w-16 h-16 md:w-24 md:h-24 bg-char-outgoing/40 rounded-full"
           animate={{ scale: [1, 1.15, 1] }}
           transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
         />
         {/* Pink rounded square - Muse color - top right */}
         <motion.div 
-          className="absolute top-[12%] right-[10%] w-14 h-14 md:w-20 md:h-20 rounded-2xl rotate-12"
-          style={{ backgroundColor: 'rgba(232, 124, 77, 0.35)' }}
+          className="absolute top-[12%] right-[10%] w-14 h-14 md:w-20 md:h-20 bg-char-creative/35 rounded-2xl rotate-12"
           animate={{ rotate: [12, 20, 12] }}
           transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
         />
         {/* Green circle - Sereny color - bottom left */}
         <motion.div 
-          className="absolute bottom-[15%] left-[12%] w-12 h-12 md:w-18 md:h-18 rounded-full"
-          style={{ backgroundColor: 'rgba(232, 124, 77, 0.4)' }}
+          className="absolute bottom-[15%] left-[12%] w-12 h-12 md:w-18 md:h-18 bg-char-empathetic/40 rounded-full"
           animate={{ y: [0, -10, 0] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
         />
         {/* Peach oval - Zen color - middle left */}
         <motion.div 
-          className="absolute top-[45%] left-[5%] w-10 h-14 md:w-14 md:h-20 rounded-full"
-          style={{ backgroundColor: 'rgba(232, 124, 77, 0.45)' }}
+          className="absolute top-[45%] left-[5%] w-10 h-14 md:w-14 md:h-20 bg-char-calm/45 rounded-full"
           animate={{ scale: [1, 1.1, 1] }}
           transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}
         />
         {/* Purple square - Champy color - bottom right */}
         <motion.div 
-          className="absolute bottom-[20%] right-[8%] w-14 h-14 md:w-20 md:h-20 rounded-xl rotate-6"
-          style={{ backgroundColor: 'rgba(232, 124, 77, 0.35)' }}
+          className="absolute bottom-[20%] right-[8%] w-14 h-14 md:w-20 md:h-20 bg-char-achiever/35 rounded-xl rotate-6"
           animate={{ rotate: [6, 14, 6] }}
           transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}
         />
         {/* Small yellow square - top center-right */}
         <motion.div 
-          className="absolute top-[25%] right-[25%] w-8 h-8 md:w-12 md:h-12 rounded-lg rotate-45"
-          style={{ backgroundColor: 'rgba(232, 124, 77, 0.3)' }}
+          className="absolute top-[25%] right-[25%] w-8 h-8 md:w-12 md:h-12 bg-char-outgoing/30 rounded-lg rotate-45"
           animate={{ rotate: [45, 55, 45] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
         />
         {/* Small pink circle - bottom center */}
         <motion.div 
-          className="absolute bottom-[30%] left-[35%] w-10 h-10 md:w-14 md:h-14 rounded-full"
-          style={{ backgroundColor: 'rgba(232, 124, 77, 0.25)' }}
+          className="absolute bottom-[30%] left-[35%] w-10 h-10 md:w-14 md:h-14 bg-char-creative/25 rounded-full"
           animate={{ y: [0, -8, 0] }}
           transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
         />
         {/* Green rounded rectangle - right side */}
         <motion.div 
-          className="absolute top-[60%] right-[15%] w-8 h-12 md:w-12 md:h-18 rounded-xl -rotate-12"
-          style={{ backgroundColor: 'rgba(232, 124, 77, 0.3)' }}
+          className="absolute top-[60%] right-[15%] w-8 h-12 md:w-12 md:h-18 bg-char-empathetic/30 rounded-xl -rotate-12"
           animate={{ rotate: [-12, -6, -12] }}
           transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 2 }}
         />
@@ -79,7 +71,7 @@ const HeroScreen = ({ onStart }: HeroScreenProps) => {
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         {/* Jolly - Top Left */}
         <motion.div
-          className="absolute -top-8 -left-8 w-52 md:w-64 lg:w-80 z-20"
+          className="absolute -top-8 -left-8 w-44 md:w-56 lg:w-72 z-20"
           initial={{ opacity: 0, x: -50, rotate: -20 }}
           animate={{ opacity: 1, x: 0, rotate: -12 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -95,7 +87,7 @@ const HeroScreen = ({ onStart }: HeroScreenProps) => {
 
         {/* Muse - Top Right */}
         <motion.div
-          className="absolute -top-6 -right-8 w-52 md:w-64 lg:w-80 z-20"
+          className="absolute -top-6 -right-8 w-44 md:w-56 lg:w-72 z-20"
           initial={{ opacity: 0, x: 50, rotate: 20 }}
           animate={{ opacity: 1, x: 0, rotate: 10 }}
           transition={{ duration: 0.8, delay: 0.3 }}
