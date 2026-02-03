@@ -63,7 +63,7 @@ const CTAScreen = () => {
             <span className="text-char-creative"> Club</span>.
             <br />
             Taste the
-            <span className="italic" style={{ color: '#e8662a', fontFamily: 'Anton, sans-serif', fontWeight: 400 }}> MOOOOD</span>!
+            <span style={{ color: '#e8662a', fontFamily: 'Anton, sans-serif', fontWeight: 400 }}> MOOOOD</span>!
           </h1>
         </motion.div>
 

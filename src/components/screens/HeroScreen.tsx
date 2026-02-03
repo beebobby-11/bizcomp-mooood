@@ -177,7 +177,7 @@ const HeroScreen = ({ onStart }: HeroScreenProps) => {
             >
               WHAT'S YOUR
               <br />
-              <span className="italic" style={{ color: '#e8662a', fontFamily: 'Anton, sans-serif', fontWeight: 400 }}>MOOOOD</span>
+              <span style={{ color: '#e8662a', fontFamily: 'Anton, sans-serif', fontWeight: 400 }}>MOOOOD</span>
               <br />
               TODAY?
             </motion.h1>
