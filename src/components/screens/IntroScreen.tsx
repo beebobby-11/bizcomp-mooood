@@ -19,50 +19,43 @@ const IntroScreen = ({ onContinue }: IntroScreenProps) => {
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         {/* Yellow circle - Jolly - top left */}
         <motion.div 
-          className="absolute top-[10%] left-[10%] w-14 h-14 md:w-20 md:h-20 rounded-full"
-          style={{ backgroundColor: 'rgba(232, 124, 77, 0.3)' }}
+          className="absolute top-[10%] left-[10%] w-14 h-14 md:w-20 md:h-20 bg-char-outgoing/40 rounded-full"
           animate={{ scale: [1, 1.12, 1] }}
           transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
         />
         {/* Pink square - Muse - top right */}
         <motion.div 
-          className="absolute top-[15%] right-[12%] w-12 h-12 md:w-18 md:h-18 rounded-xl rotate-12"
-          style={{ backgroundColor: 'rgba(232, 124, 77, 0.25)' }}
+          className="absolute top-[15%] right-[12%] w-12 h-12 md:w-18 md:h-18 bg-char-creative/35 rounded-xl rotate-12"
           animate={{ rotate: [12, 18, 12] }}
           transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
         />
         {/* Green circle - Sereny - bottom left */}
         <motion.div 
-          className="absolute bottom-[18%] left-[15%] w-10 h-10 md:w-16 md:h-16 rounded-full"
-          style={{ backgroundColor: 'rgba(232, 124, 77, 0.3)' }}
+          className="absolute bottom-[18%] left-[15%] w-10 h-10 md:w-16 md:h-16 bg-char-empathetic/40 rounded-full"
           animate={{ y: [0, -8, 0] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
         />
         {/* Peach oval - Zen - middle left */}
         <motion.div 
-          className="absolute top-[40%] left-[8%] w-8 h-12 md:w-12 md:h-18 rounded-full"
-          style={{ backgroundColor: 'rgba(232, 124, 77, 0.35)' }}
+          className="absolute top-[40%] left-[8%] w-8 h-12 md:w-12 md:h-18 bg-char-calm/45 rounded-full"
           animate={{ scale: [1, 1.1, 1] }}
           transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}
         />
         {/* Purple square - Champy - bottom right */}
         <motion.div 
-          className="absolute bottom-[22%] right-[10%] w-12 h-12 md:w-18 md:h-18 rounded-xl rotate-6"
-          style={{ backgroundColor: 'rgba(232, 124, 77, 0.25)' }}
+          className="absolute bottom-[22%] right-[10%] w-12 h-12 md:w-18 md:h-18 bg-char-achiever/35 rounded-xl rotate-6"
           animate={{ rotate: [6, 12, 6] }}
           transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}
         />
         {/* Small yellow - right side */}
         <motion.div 
-          className="absolute top-[55%] right-[18%] w-8 h-8 md:w-12 md:h-12 rounded-lg rotate-45"
-          style={{ backgroundColor: 'rgba(232, 124, 77, 0.2)' }}
+          className="absolute top-[55%] right-[18%] w-8 h-8 md:w-12 md:h-12 bg-char-outgoing/30 rounded-lg rotate-45"
           animate={{ rotate: [45, 55, 45] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
         />
         {/* Small green circle - top center */}
         <motion.div 
-          className="absolute top-[25%] left-[30%] w-6 h-6 md:w-10 md:h-10 rounded-full"
-          style={{ backgroundColor: 'rgba(232, 124, 77, 0.18)' }}
+          className="absolute top-[25%] left-[30%] w-6 h-6 md:w-10 md:h-10 bg-char-empathetic/25 rounded-full"
           animate={{ y: [0, -6, 0] }}
           transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
         />
@@ -74,7 +67,7 @@ const IntroScreen = ({ onContinue }: IntroScreenProps) => {
         <motion.img
           src={jollyImg}
           alt=""
-          className="absolute -top-12 -left-16 w-48 md:w-56 lg:w-64 drop-shadow-lg character-transparent"
+          className="absolute -top-12 -left-16 w-40 md:w-48 lg:w-56 drop-shadow-lg character-transparent"
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0, y: [0, -10, 0] }}
           transition={{ 
@@ -88,7 +81,7 @@ const IntroScreen = ({ onContinue }: IntroScreenProps) => {
         <motion.img
           src={museImg}
           alt=""
-          className="absolute -top-10 -right-16 w-48 md:w-56 lg:w-64 drop-shadow-lg character-transparent"
+          className="absolute -top-10 -right-16 w-40 md:w-48 lg:w-56 drop-shadow-lg character-transparent"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0, y: [0, -8, 0] }}
           transition={{ 
