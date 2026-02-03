@@ -63,7 +63,7 @@ const CTAScreen = () => {
             <span className="text-char-creative"> Club</span>.
             <br />
             Taste the
-            <span className="text-bright-orange"> Mooood</span>!
+            <span className="italic" style={{ color: '#e8662a', fontFamily: 'Anton, sans-serif', fontWeight: 400 }}> MOOOOD</span>!
           </h1>
         </motion.div>
 
@@ -118,7 +118,7 @@ const CTAScreen = () => {
         >
           <div className="bg-white/80 backdrop-blur-sm rounded-full px-8 py-4 inline-block shadow-md">
             <p className="font-display text-xl font-bold tracking-tight text-foreground">
-              BIZCOMP <span className="text-foreground/40 font-body font-light">×</span> MOOOOD
+              BIZCOMP <span className="text-foreground/40 font-body font-light">×</span> <span style={{ color: '#e8662a', fontFamily: 'Anton, sans-serif', fontWeight: 400 }}>MOOOOD</span>
             </p>
           </div>
         </motion.div>
