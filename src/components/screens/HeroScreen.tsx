@@ -161,7 +161,7 @@ const HeroScreen = ({ onStart }: HeroScreenProps) => {
             transition={{ duration: 0.6 }}
           >
             <span className="font-display text-lg font-bold tracking-tight text-foreground">
-              BIZCOMP <span className="text-muted-foreground font-body font-light">×</span> MOOOOD
+              BIZCOMP <span className="text-muted-foreground font-body font-light">×</span> <span style={{ color: '#e8662a', fontFamily: 'Anton, sans-serif', fontWeight: 400 }}>MOOOOD</span>
             </span>
           </motion.div>
         </header>
@@ -177,7 +177,7 @@ const HeroScreen = ({ onStart }: HeroScreenProps) => {
             >
               WHAT'S YOUR
               <br />
-              <span className="text-bright-orange italic">MOOOOD</span>
+              <span className="italic" style={{ color: '#e8662a', fontFamily: 'Anton, sans-serif', fontWeight: 400 }}>MOOOOD</span>
               <br />
               TODAY?
             </motion.h1>
