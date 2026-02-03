@@ -71,7 +71,7 @@ const HeroScreen = ({ onStart }: HeroScreenProps) => {
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         {/* Jolly - Top Left */}
         <motion.div
-          className="absolute -top-8 -left-8 w-32 md:w-44 lg:w-56 z-20"
+          className="absolute -top-8 -left-8 w-32 md:w-40 lg:w-48 z-20"
           initial={{ opacity: 0, x: -50, rotate: -20 }}
           animate={{ opacity: 1, x: 0, rotate: -12 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -87,7 +87,7 @@ const HeroScreen = ({ onStart }: HeroScreenProps) => {
 
         {/* Muse - Top Right */}
         <motion.div
-          className="absolute -top-6 -right-8 w-32 md:w-44 lg:w-56 z-20"
+          className="absolute -top-6 -right-8 w-32 md:w-40 lg:w-48 z-20"
           initial={{ opacity: 0, x: 50, rotate: 20 }}
           animate={{ opacity: 1, x: 0, rotate: 10 }}
           transition={{ duration: 0.8, delay: 0.3 }}
@@ -103,7 +103,7 @@ const HeroScreen = ({ onStart }: HeroScreenProps) => {
 
         {/* Champy - Middle Right */}
         <motion.div
-          className="absolute top-1/3 -right-10 w-32 md:w-44 lg:w-56 z-20"
+          className="absolute top-1/3 -right-10 w-32 md:w-40 lg:w-48 z-20"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
@@ -119,7 +119,7 @@ const HeroScreen = ({ onStart }: HeroScreenProps) => {
 
         {/* Sereny - Bottom Left */}
         <motion.div
-          className="absolute bottom-16 -left-10 w-32 md:w-44 lg:w-56 z-20"
+          className="absolute bottom-16 -left-10 w-32 md:w-40 lg:w-48 z-20"
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
@@ -135,7 +135,7 @@ const HeroScreen = ({ onStart }: HeroScreenProps) => {
 
         {/* Zen - Bottom Right */}
         <motion.div
-          className="absolute bottom-12 -right-8 w-32 md:w-44 lg:w-56 z-20"
+          className="absolute bottom-12 -right-8 w-32 md:w-40 lg:w-48 z-20"
           initial={{ opacity: 0, x: 50, rotate: 15 }}
           animate={{ opacity: 1, x: 0, rotate: 8 }}
           transition={{ duration: 0.8, delay: 0.6 }}
