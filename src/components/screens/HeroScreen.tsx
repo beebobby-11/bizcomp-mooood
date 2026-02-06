@@ -189,7 +189,7 @@ const HeroScreen = ({ onStart }: HeroScreenProps) => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              Discover your business personality and find the perfect fuel for your next big win! 🚀
+              Discover your business personality and find the perfect fuel for your next big win!
             </motion.p>
 
             <motion.div
