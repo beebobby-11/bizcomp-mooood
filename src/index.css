@@ -54,11 +54,11 @@
     --coral-pink: 15 75% 80%;
     
     /* Character colors - matching reference illustrations */
-    --char-outgoing: 18 85% 54%; /* Soft orange */
-    --char-creative: 18 85% 54%; /* Soft orange */
-    --char-empathetic: 18 85% 54%; /* Soft orange */
-    --char-calm: 18 85% 54%; /* Soft orange */
-    --char-achiever: 18 85% 54%; /* Soft orange */
+    --char-outgoing: 42 90% 68%; /* Golden star yellow */
+    --char-creative: 340 65% 72%; /* Dragon pink/magenta cloud */
+    --char-empathetic: 145 45% 62%; /* Green heart */
+    --char-calm: 20 70% 85%; /* Peachy pink oval */
+    --char-achiever: 265 55% 68%; /* Purple flame */
     
     --bright-orange: 30 95% 58%;
     --lemon-yellow: 48 95% 65%;

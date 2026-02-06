@@ -9,7 +9,6 @@ interface QuizScreenProps {
 interface QuizOption {
   id: CharacterType;
   text: string;
-  emoji: string;
 }
 
 interface QuizQuestion {
@@ -32,99 +31,99 @@ const questions: QuizQuestion[] = [
     id: 1,
     question: "When you wake up, what kind of mood do you usually start the day with?",
     options: [
-      { id: 'outgoing', text: "Check your phone, chat with friends, play some fun music", emoji: "📱" },
-      { id: 'creative', text: "Go with the flow of your mood, choose what to do based on how you feel", emoji: "🎨" },
-      { id: 'empathetic', text: "Take it slow, scroll around, do little things", emoji: "💆" },
-      { id: 'calm', text: "Sit quietly, don't rush, slowly get yourself ready", emoji: "🌅" },
-      { id: 'achiever', text: "Open a to-do list and plan the day right away", emoji: "📋" },
+      { id: 'outgoing', text: "Check your phone, chat with friends, play some fun music" },
+      { id: 'creative', text: "Go with the flow of your mood, choose what to do based on how you feel" },
+      { id: 'empathetic', text: "Take it slow, scroll around, do little things" },
+      { id: 'calm', text: "Sit quietly, don't rush, slowly get yourself ready" },
+      { id: 'achiever', text: "Open a to-do list and plan the day right away" },
     ],
   },
   {
     id: 2,
     question: "What kind of atmosphere makes you feel most like yourself?",
     options: [
-      { id: 'outgoing', text: "A café or lively place with people chatting and laughing", emoji: "☕" },
-      { id: 'creative', text: "A small studio or workspace decorated in your own style", emoji: "✨" },
-      { id: 'empathetic', text: "A cozy room with a comfy vibe that feels relaxing", emoji: "🛋️" },
-      { id: 'calm', text: "A quiet corner near a window with plants or natural light", emoji: "🪴" },
-      { id: 'achiever', text: "A neat, organized workspace with clear goals", emoji: "💼" },
+      { id: 'outgoing', text: "A café or lively place with people chatting and laughing" },
+      { id: 'creative', text: "A small studio or workspace decorated in your own style" },
+      { id: 'empathetic', text: "A cozy room with a comfy vibe that feels relaxing" },
+      { id: 'calm', text: "A quiet corner near a window with plants or natural light" },
+      { id: 'achiever', text: "A neat, organized workspace with clear goals" },
     ],
   },
   {
     id: 3,
     question: "If you could choose, where would you go?",
     options: [
-      { id: 'outgoing', text: "Tokyo — big city, busy, something to do all the time", emoji: "🗼" },
-      { id: 'creative', text: "Iceland — new, unusual, different from everyone else", emoji: "🏔️" },
-      { id: 'empathetic', text: "Switzerland — slow-paced city, cute cafés", emoji: "🏔️" },
-      { id: 'calm', text: "New Zealand — nature, peaceful and refreshing", emoji: "🌿" },
-      { id: 'achiever', text: "Singapore — modern system, easy travel, efficient", emoji: "🏙️" },
+      { id: 'outgoing', text: "Tokyo — big city, busy, something to do all the time" },
+      { id: 'creative', text: "Iceland — new, unusual, different from everyone else" },
+      { id: 'empathetic', text: "Switzerland — slow-paced city, cute cafés" },
+      { id: 'calm', text: "New Zealand — nature, peaceful and refreshing" },
+      { id: 'achiever', text: "Singapore — modern system, easy travel, efficient" },
     ],
   },
   {
     id: 4,
     question: "What does your usual daily routine look like?",
     options: [
-      { id: 'outgoing', text: "Set a rough plan, then let the day lead", emoji: "🎲" },
-      { id: 'creative', text: "Not very structured, work based on mood and inspiration", emoji: "🎨" },
-      { id: 'empathetic', text: "When you feel overwhelmed, take care of yourself during the day", emoji: "💝" },
-      { id: 'calm', text: "Do what needs to be done, little by little, not rushing", emoji: "🌸" },
-      { id: 'achiever', text: "Plan clearly in steps and check progress regularly", emoji: "✅" },
+      { id: 'outgoing', text: "Set a rough plan, then let the day lead" },
+      { id: 'creative', text: "Not very structured, work based on mood and inspiration" },
+      { id: 'empathetic', text: "When you feel overwhelmed, take care of yourself during the day" },
+      { id: 'calm', text: "Do what needs to be done, little by little, not rushing" },
+      { id: 'achiever', text: "Plan clearly in steps and check progress regularly" },
     ],
   },
   {
     id: 5,
     question: "When something doesn't go as planned, you usually…",
     options: [
-      { id: 'outgoing', text: "Adjust and move on", emoji: "💪" },
-      { id: 'creative', text: "Try to see it from a new perspective", emoji: "🔄" },
-      { id: 'empathetic', text: "Care about your own feelings and others' feelings", emoji: "💕" },
-      { id: 'calm', text: "Pause and reset yourself", emoji: "🧘" },
-      { id: 'achiever', text: "Fix the problem as quickly as possible", emoji: "🔧" },
+      { id: 'outgoing', text: "Adjust and move on" },
+      { id: 'creative', text: "Try to see it from a new perspective" },
+      { id: 'empathetic', text: "Care about your own feelings and others' feelings" },
+      { id: 'calm', text: "Pause and reset yourself" },
+      { id: 'achiever', text: "Fix the problem as quickly as possible" },
     ],
   },
   {
     id: 6,
     question: "What matters most to you right now?",
     options: [
-      { id: 'outgoing', text: "Having positive energy", emoji: "⚡" },
-      { id: 'creative', text: "Freedom to think and do", emoji: "🦋" },
-      { id: 'empathetic', text: "Taking care of yourself", emoji: "💚" },
-      { id: 'calm', text: "Simplicity and peace of mind", emoji: "🕊️" },
-      { id: 'achiever', text: "Success and progress", emoji: "🏆" },
+      { id: 'outgoing', text: "Having positive energy" },
+      { id: 'creative', text: "Freedom to think and do" },
+      { id: 'empathetic', text: "Taking care of yourself" },
+      { id: 'calm', text: "Simplicity and peace of mind" },
+      { id: 'achiever', text: "Success and progress" },
     ],
   },
   {
     id: 7,
     question: "How much do you like trying new things?",
     options: [
-      { id: 'outgoing', text: "Love it", emoji: "🤩" },
-      { id: 'creative', text: "Quite like it", emoji: "😊" },
-      { id: 'empathetic', text: "Depends on the situation", emoji: "🤔" },
-      { id: 'calm', text: "Don't really like it", emoji: "😌" },
-      { id: 'achiever', text: "Like it if it helps me grow", emoji: "📈" },
+      { id: 'outgoing', text: "Love it" },
+      { id: 'creative', text: "Quite like it" },
+      { id: 'empathetic', text: "Depends on the situation" },
+      { id: 'calm', text: "Don't really like it" },
+      { id: 'achiever', text: "Like it if it helps me grow" },
     ],
   },
   {
     id: 8,
     question: "In your free time, how do you like to spend it?",
     options: [
-      { id: 'outgoing', text: "Hang out with friends, chat a lot, share little life stories", emoji: "👯" },
-      { id: 'creative', text: "Do something that lets your emotions flow, like drawing, writing, photography", emoji: "📸" },
-      { id: 'empathetic', text: "Take gentle care of yourself — rest your mind, body, and feelings", emoji: "🧘" },
-      { id: 'calm', text: "Stay quiet with yourself, play soft music, or just let your mind wander", emoji: "🎵" },
-      { id: 'achiever', text: "Review goals, plan for the future, or improve yourself a bit more", emoji: "📚" },
+      { id: 'outgoing', text: "Hang out with friends, chat a lot, share little life stories" },
+      { id: 'creative', text: "Do something that lets your emotions flow, like drawing, writing, photography" },
+      { id: 'empathetic', text: "Take gentle care of yourself — rest your mind, body, and feelings" },
+      { id: 'calm', text: "Stay quiet with yourself, play soft music, or just let your mind wander" },
+      { id: 'achiever', text: "Review goals, plan for the future, or improve yourself a bit more" },
     ],
   },
   {
     id: 9,
     question: "Which mood feels most like you?",
     options: [
-      { id: 'outgoing', text: "Strawberry Surprised — sweet and a little sour, bright, playful", emoji: "🍓" },
-      { id: 'creative', text: "Orange Passionate — bold, energetic, slightly zesty, motivating", emoji: "🍊" },
-      { id: 'empathetic', text: "Avocado Pride — soft, deep, gives a grounded feeling, like recharging", emoji: "🥑" },
-      { id: 'calm', text: "Coconut Calm — light, smooth, refreshing but not too strong", emoji: "🥥" },
-      { id: 'achiever', text: "Keenly Kale — green, clean, serious about health, goal-oriented", emoji: "🥬" },
+      { id: 'outgoing', text: "Strawberry Surprised — sweet and a little sour, bright, playful" },
+      { id: 'creative', text: "Orange Passionate — bold, energetic, slightly zesty, motivating" },
+      { id: 'empathetic', text: "Avocado Pride — soft, deep, gives a grounded feeling, like recharging" },
+      { id: 'calm', text: "Coconut Calm — light, smooth, refreshing but not too strong" },
+      { id: 'achiever', text: "Keenly Kale — green, clean, serious about health, goal-oriented" },
     ],
   },
 ];
@@ -223,7 +222,7 @@ const QuizScreen = ({ onComplete }: QuizScreenProps) => {
       {/* Question counter */}
       <div className="container mx-auto px-6 pt-16">
         <p className="text-base font-display tracking-widest text-muted-foreground text-center">
-          ✨ Question {currentQuestion + 1} of {questions.length} ✨
+          Question {currentQuestion + 1} of {questions.length}
         </p>
       </div>
 
@@ -259,7 +258,6 @@ const QuizScreen = ({ onComplete }: QuizScreenProps) => {
                   whileTap={{ scale: 0.98 }}
                 >
                   <span className="flex items-center gap-3">
-                    <span className="text-2xl">{option.emoji}</span>
                     <span className="flex-1">
                       <span className="text-lg font-display font-semibold text-foreground">
                         {option.text}
