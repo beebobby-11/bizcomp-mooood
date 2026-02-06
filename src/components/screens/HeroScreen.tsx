@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
 
 // Import transparent character SVGs
+import moooodLogo from '@/assets/characters/MOOOOD.png';
 import jollyImg from '@/assets/characters/jolly11.png';
 import museImg from '@/assets/characters/muse11.png';
 import serenyImg from '@/assets/characters/seceny11.png';
@@ -177,7 +178,7 @@ const HeroScreen = ({ onStart }: HeroScreenProps) => {
             >
               WHAT'S YOUR
               <br />
-              <span style={{ color: '#e8662a', fontFamily: 'Anton, sans-serif', fontWeight: 400 }}>MOOOOD</span>
+              <img src={moooodLogo} alt="MOOOOD" className="inline-block h-16 md:h-20 lg:h-24 my-2" />
               <br />
               TODAY?
             </motion.h1>
