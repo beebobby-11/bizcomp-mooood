@@ -178,7 +178,7 @@ const HeroScreen = ({ onStart }: HeroScreenProps) => {
             >
               WHAT'S YOUR
               <br />
-              <img src={moooodLogo} alt="MOOOOD" className="inline-block h-12 md:h-16 lg:h-20 my-2" style={{ maxWidth: '100%', height: 'auto' }} />
+              <img src={moooodLogo} alt="MOOOOD" className="inline-block h-10 md:h-14 lg:h-16 my-2" style={{ maxWidth: '100%', height: 'auto' }} />
               <br />
               TODAY?
             </motion.h1>
