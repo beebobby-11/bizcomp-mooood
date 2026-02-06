@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
 
 // Import transparent character SVGs
-import moooodLogo from '@/assets/characters/MOOOOD.png';
+import moooodLogo from '@/assets/characters/moooooooooooood.png';
 import jollyImg from '@/assets/characters/jolly11.png';
 import museImg from '@/assets/characters/muse11.png';
 import serenyImg from '@/assets/characters/seceny11.png';
