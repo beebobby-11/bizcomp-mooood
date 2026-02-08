@@ -276,7 +276,7 @@ const ResultScreen = ({ result, onContinue }: ResultScreenProps) => {
             onClick={onContinue}
             className="w-full rounded-full font-display text-lg"
           >
-            🎁 CLAIM YOUR REWARD
+            CLAIM YOUR REWARD
           </Button>
           <Button 
             variant="hero-outline" 
@@ -284,7 +284,7 @@ const ResultScreen = ({ result, onContinue }: ResultScreenProps) => {
             onClick={handleShare}
             className="w-full rounded-full font-display"
           >
-            📸 SHARE TO IG STORY
+            SHARE TO IG STORY
           </Button>
         </motion.div>
       </div>

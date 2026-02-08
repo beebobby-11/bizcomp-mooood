@@ -156,8 +156,7 @@ const HeroScreen = ({ onStart }: HeroScreenProps) => {
       <div className="relative z-10 container mx-auto px-6 min-h-screen flex flex-col">
         {/* Header */}
         <header className="pt-8 flex justify-center">
-          <motion.div 
-            className="bg-white/80 backdrop-blur-sm rounded-full px-2 py-2 shadow-md"
+          <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -197,7 +196,7 @@ const HeroScreen = ({ onStart }: HeroScreenProps) => {
               transition={{ duration: 0.8, delay: 0.6 }}
             >
               <Button variant="hero" size="xl" onClick={onStart} className="rounded-full font-display text-lg shadow-lg hover:shadow-xl transition-shadow">
-                ✨ START THE EXPERIENCE
+                START THE EXPERIENCE
               </Button>
             </motion.div>
           </div>

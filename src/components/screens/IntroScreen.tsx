@@ -154,7 +154,7 @@ const IntroScreen = ({ onContinue }: IntroScreenProps) => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          Find the perfect Mooood for your Bizcomp journey. Answer a few fun questions and discover your achiever archetype! 🌟
+          Find the perfect Mooood for your Bizcomp journey. Answer a few fun questions and discover your achiever archetype!
         </motion.p>
 
         <motion.div
@@ -163,7 +163,7 @@ const IntroScreen = ({ onContinue }: IntroScreenProps) => {
           transition={{ duration: 0.8, delay: 0.5 }}
         >
           <Button variant="hero" size="xl" onClick={onContinue} className="rounded-full font-display text-lg shadow-lg hover:shadow-xl transition-shadow">
-            LET'S BEGIN 🎉
+            LET'S BEGIN
           </Button>
         </motion.div>
       </div>
