@@ -8,6 +8,7 @@ import museImg from '@/assets/characters/muse11.png';
 import serenyImg from '@/assets/characters/seceny11.png';
 import zenImg from '@/assets/characters/zen11.png';
 import champyImg from '@/assets/characters/champy11.png';
+import bizcompXMoooodLogo from '@/assets/characters/BizCompXMoood.svg';
 
 interface HeroScreenProps {
   onStart: () => void;
@@ -161,9 +162,7 @@ const HeroScreen = ({ onStart }: HeroScreenProps) => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <span className="font-display text-lg font-bold tracking-tight text-foreground">
-              BIZCOMP <span className="text-muted-foreground font-body font-light">×</span> <span style={{ color: '#e8662a', fontFamily: 'Anton, sans-serif', fontWeight: 400 }}>MOOOOD</span>
-            </span>
+            <img src={bizcompXMoooodLogo} alt="BIZCOMP × MOOOOD" className="h-8" />
           </motion.div>
         </header>
 
