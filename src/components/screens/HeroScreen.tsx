@@ -208,7 +208,7 @@ const HeroScreen = ({ onStart }: HeroScreenProps) => {
           <div className="flex animate-marquee whitespace-nowrap">
             {[...Array(4)].map((_, i) => (
               <span key={i} className="mx-8 text-sm font-body tracking-widest text-muted-foreground uppercase">
-                Bizcomp × Mooood: January Showcase — Fueling the Next Generation of Achievers
+                Bizcomp × Mooood: March Showcase — Fueling the Next Generation of Achievers
                 <span className="mx-8 text-accent">✦</span>
               </span>
             ))}

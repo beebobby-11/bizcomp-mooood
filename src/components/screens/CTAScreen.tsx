@@ -55,7 +55,7 @@ const CTAScreen = () => {
           transition={{ duration: 0.8 }}
         >
           <p className="text-base font-display tracking-widest text-foreground/60 uppercase mb-4">
-            🎊 January Showcase 🎊
+            🎊 March Showcase 🎊
           </p>
           
           <h1 className="text-4xl md:text-6xl font-display font-bold text-foreground mb-6 leading-tight">
