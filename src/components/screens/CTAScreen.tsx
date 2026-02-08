@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
+import bizcompXMoooodLogo from '@/assets/characters/BizCompXMoood.svg';
 
 const CTAScreen = () => {
   const handleRegister = () => {
@@ -116,11 +117,7 @@ const CTAScreen = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.9 }}
         >
-          <div className="bg-white/80 backdrop-blur-sm rounded-full px-8 py-4 inline-block shadow-md">
-            <p className="font-display text-xl font-bold tracking-tight text-foreground">
-              BIZCOMP <span className="text-foreground/40 font-body font-light">×</span> <span style={{ color: '#e8662a', fontFamily: 'Anton, sans-serif', fontWeight: 400 }}>MOOOOD</span>
-            </p>
-          </div>
+          <img src={bizcompXMoooodLogo} alt="BIZCOMP × MOOOOD" className="h-12" />
         </motion.div>
       </div>
     </div>
