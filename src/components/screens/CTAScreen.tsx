@@ -56,7 +56,7 @@ const CTAScreen = () => {
           transition={{ duration: 0.8 }}
         >
           <p className="text-base font-display tracking-widest text-foreground/60 uppercase mb-4">
-            🎊 March Showcase 🎊
+            March Showcase
           </p>
           
           <h1 className="text-4xl md:text-6xl font-display font-bold text-foreground mb-6 leading-tight">
@@ -75,7 +75,7 @@ const CTAScreen = () => {
           transition={{ duration: 0.8, delay: 0.3 }}
         >
           Join us for an amazing collaboration event! 
-          Show your result screen at our booth to claim your exclusive reward! 🎁
+          Show your result screen at our booth to claim your exclusive reward!
         </motion.p>
 
         <motion.div
@@ -90,7 +90,7 @@ const CTAScreen = () => {
             onClick={handleRegister}
             className="w-full max-w-sm rounded-full font-display text-lg shadow-lg hover:shadow-xl transition-shadow"
           >
-            🚀 REGISTER FOR EVENT
+            REGISTER FOR EVENT
           </Button>
           
           {/* Reward info card */}
@@ -101,11 +101,11 @@ const CTAScreen = () => {
             transition={{ duration: 0.6, delay: 0.7 }}
           >
             <p className="text-base font-display text-foreground/90 mb-1">
-              🎁 <span className="font-bold">Exclusive Reward!</span>
+              <span className="font-bold">Exclusive Reward!</span>
             </p>
             <p className="text-sm font-body text-foreground/60 leading-relaxed">
               Show your result screen at our booth to get a free 
-              <span className="font-semibold text-foreground/80"> Mooood × Bizcomp Sticker Pack!</span>
+              <span className="font-semibold text-foreground/80"> Mooood × BizComp Sticker Pack!</span>
             </p>
           </motion.div>
         </motion.div>
