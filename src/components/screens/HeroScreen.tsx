@@ -157,12 +157,12 @@ const HeroScreen = ({ onStart }: HeroScreenProps) => {
         {/* Header */}
         <header className="pt-8 flex justify-center">
           <motion.div 
-            className="bg-white/80 backdrop-blur-sm rounded-full px-6 py-3 shadow-md"
+            className="bg-white/80 backdrop-blur-sm rounded-full px-2 py-2 shadow-md"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <img src={bizcompXMoooodLogo} alt="BIZCOMP × MOOOOD" className="h-8" />
+            <img src={bizcompXMoooodLogo} alt="BIZCOMP × MOOOOD" className="h-12" />
           </motion.div>
         </header>
 
