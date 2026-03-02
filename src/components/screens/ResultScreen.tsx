@@ -74,7 +74,7 @@ const ResultScreen = ({ result, onContinue }: ResultScreenProps) => {
     if (navigator.share) {
       navigator.share({
         title: `I'm ${result.characterName}!`,
-        text: `${result.description} My perfect Mooood match is ${result.product}! Take the quiz to find yours.`,
+        text: `${result.description} My perfect Mooood matches: ${result.productList.join(', ')}! Take the quiz to find yours.`,
         url: window.location.href,
       });
     }
@@ -87,44 +87,51 @@ const ResultScreen = ({ result, onContinue }: ResultScreenProps) => {
         {/* Yellow circle - Jolly - top left */}
         <motion.div 
           className="absolute top-[10%] left-[8%] w-16 h-16 md:w-24 md:h-24 bg-char-outgoing/35 rounded-full"
-          animate={{ scale: [1, 1.15, 1] }}
-          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: [1, 1.15, 1] }}
+          transition={{ opacity: { duration: 0.5 }, scale: { duration: 5, repeat: Infinity, ease: "easeInOut" } }}
         />
         {/* Pink square - Muse - top right */}
         <motion.div 
           className="absolute top-[8%] right-[10%] w-14 h-14 md:w-20 md:h-20 bg-char-creative/30 rounded-xl rotate-12"
-          animate={{ rotate: [12, 20, 12] }}
-          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1, rotate: [12, 20, 12] }}
+          transition={{ opacity: { duration: 0.5 }, scale: { duration: 0.5 }, rotate: { duration: 6, repeat: Infinity, ease: "easeInOut", delay: 0.5 } }}
         />
         {/* Green circle - Sereny - bottom left */}
         <motion.div 
           className="absolute bottom-[15%] left-[10%] w-12 h-12 md:w-18 md:h-18 bg-char-empathetic/35 rounded-full"
-          animate={{ y: [0, -10, 0] }}
-          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1, y: [0, -10, 0] }}
+          transition={{ opacity: { duration: 0.5 }, scale: { duration: 0.5 }, y: { duration: 4, repeat: Infinity, ease: "easeInOut" } }}
         />
         {/* Peach oval - Zen - middle left */}
         <motion.div 
           className="absolute top-[40%] left-[5%] w-10 h-14 md:w-14 md:h-20 bg-char-calm/40 rounded-full"
-          animate={{ scale: [1, 1.1, 1] }}
-          transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: [1, 1.1, 1] }}
+          transition={{ opacity: { duration: 0.5 }, scale: { duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 } }}
         />
         {/* Purple square - Champy - bottom right */}
         <motion.div 
           className="absolute bottom-[18%] right-[8%] w-14 h-14 md:w-20 md:h-20 bg-char-achiever/30 rounded-xl rotate-6"
-          animate={{ rotate: [6, 14, 6] }}
-          transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1, rotate: [6, 14, 6] }}
+          transition={{ opacity: { duration: 0.5 }, scale: { duration: 0.5 }, rotate: { duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 0.8 } }}
         />
         {/* Small yellow - right side */}
         <motion.div 
           className="absolute top-[30%] right-[15%] w-10 h-10 md:w-14 md:h-14 bg-char-outgoing/25 rounded-lg rotate-45"
-          animate={{ rotate: [45, 55, 45] }}
-          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1, rotate: [45, 55, 45] }}
+          transition={{ opacity: { duration: 0.5 }, scale: { duration: 0.5 }, rotate: { duration: 4, repeat: Infinity, ease: "easeInOut" } }}
         />
         {/* Small green - top center */}
         <motion.div 
           className="absolute top-[20%] left-[25%] w-8 h-8 md:w-12 md:h-12 bg-char-empathetic/25 rounded-full"
-          animate={{ y: [0, -6, 0] }}
-          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1, y: [0, -6, 0] }}
+          transition={{ opacity: { duration: 0.5 }, scale: { duration: 0.5 }, y: { duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1.5 } }}
         />
       </div>
 
@@ -251,15 +258,24 @@ const ResultScreen = ({ result, onContinue }: ResultScreenProps) => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
           >
-            <p className="text-sm font-display tracking-widest text-foreground/70 uppercase mb-1">
+            <p className="text-sm font-display tracking-widest text-foreground/70 uppercase mb-3">
               🍃 Your Perfect Match 🍃
             </p>
-            <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-1">
-              {result.product}
-            </h2>
-            <p className="text-lg font-body text-foreground/80">
-              {result.productFlavor}
-            </p>
+            <div className="space-y-2">
+              {result.productList.map((product, index) => (
+                <motion.div
+                  key={index}
+                  className="bg-white/40 backdrop-blur-sm rounded-2xl px-4 py-3"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.4, delay: 0.6 + index * 0.1 }}
+                >
+                  <h3 className="text-lg md:text-xl font-display font-bold text-foreground">
+                    {product}
+                  </h3>
+                </motion.div>
+              ))}
+            </div>
           </motion.div>
         </div>
 

@@ -23,8 +23,7 @@ export interface CharacterResult {
   trait: string;
   traitTh: string;
   description: string;
-  product: string;
-  productFlavor: string;
+  productList: string[];
   emoji: string;
 }
 
@@ -37,8 +36,7 @@ const characterData: Record<CharacterType, CharacterResult> = {
     trait: 'Positive Energy',
     traitTh: 'พลังบวก สดใส',
     description: 'You light up every room! Your joyful spirit and social energy inspire everyone around you.',
-    product: 'Mango Fresh Bar',
-    productFlavor: 'Yellow-Orange Mango',
+    productList: ['Orange Passionate', 'Tropical Joy', 'Thai Tea Protein Ball'],
     emoji: '⭐',
   },
   creative: {
@@ -49,8 +47,7 @@ const characterData: Record<CharacterType, CharacterResult> = {
     trait: 'Free Spirit',
     traitTh: 'รักอิสระ สร้างสรรค์',
     description: 'Your imagination knows no bounds! You see beauty and possibilities everywhere.',
-    product: 'Dragon Fresh Bar',
-    productFlavor: 'Dragon Pink',
+    productList: ['Flirty Berry Yolo', 'Beet Boost', 'Cranberry Lemon Protein Ball'],
     emoji: '🌸',
   },
   empathetic: {
@@ -61,8 +58,7 @@ const characterData: Record<CharacterType, CharacterResult> = {
     trait: 'Self Care Champion',
     traitTh: 'เป็นห่วงความรู้สึกตัวเองและคนอื่น',
     description: 'You care deeply about yourself and others. Self-care is your superpower!',
-    product: 'Cucumber Fresh Bar',
-    productFlavor: 'Green Cucumber',
+    productList: ['Keenly Kaley', 'Avoco Pride', 'Matcha Latte Protein Ball'],
     emoji: '💚',
   },
   calm: {
@@ -73,8 +69,7 @@ const characterData: Record<CharacterType, CharacterResult> = {
     trait: 'Peaceful Listener',
     traitTh: 'เรียบง่าย ชอบรับฟัง',
     description: 'Your calm presence is a gift. You listen deeply and bring peace to any situation.',
-    product: 'Peach Fresh Bar',
-    productFlavor: 'Baby Pink Peach',
+    productList: ['Endless Blue Sky', 'Coconut Calm', 'Carrot Cake Protein Ball'],
     emoji: '🍑',
   },
   achiever: {
@@ -85,8 +80,7 @@ const characterData: Record<CharacterType, CharacterResult> = {
     trait: 'Determined to Succeed',
     traitTh: 'มุ่งมั่น ทะเยอทะยาน',
     description: 'Nothing can stop you! Your determination and drive push you toward every goal.',
-    product: 'Blueberry Fresh Bar',
-    productFlavor: 'Blueberry Pink',
+    productList: ['Gym MOOOOD', 'Dark Chocolate Protein Ball', 'Mocha Protein Ball'],
     emoji: '💜',
   },
 };

@@ -15,26 +15,30 @@ const CTAScreen = () => {
         {/* Top right iridescent blob */}
         <motion.div
           className="absolute -top-20 -right-20 w-72 h-72 bg-gradient-to-br from-purple-300/50 via-blue-300/40 to-cyan-300/50 rounded-full blur-2xl"
-          animate={{ scale: [1, 1.15, 1], rotate: [0, 10, 0] }}
-          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: [1, 1.15, 1], rotate: [0, 10, 0] }}
+          transition={{ opacity: { duration: 0.5 }, scale: { duration: 8, repeat: Infinity, ease: "easeInOut" }, rotate: { duration: 8, repeat: Infinity, ease: "easeInOut" } }}
         />
         {/* Bottom left pink blob */}
         <motion.div
           className="absolute -bottom-24 -left-24 w-96 h-96 bg-gradient-to-tr from-pink-300/50 via-rose-200/40 to-orange-200/40 rounded-full blur-2xl"
-          animate={{ scale: [1.1, 1, 1.1] }}
-          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: [1.1, 1, 1.1] }}
+          transition={{ opacity: { duration: 0.5 }, scale: { duration: 10, repeat: Infinity, ease: "easeInOut" } }}
         />
         {/* Mid-left cyan accent */}
         <motion.div
           className="absolute top-1/3 -left-16 w-40 h-40 bg-gradient-to-r from-cyan-300/40 to-purple-300/40 rounded-full blur-xl"
-          animate={{ y: [0, -30, 0] }}
-          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1, y: [0, -30, 0] }}
+          transition={{ opacity: { duration: 0.5 }, scale: { duration: 0.5 }, y: { duration: 6, repeat: Infinity, ease: "easeInOut" } }}
         />
         {/* Mid-right pink accent */}
         <motion.div
           className="absolute bottom-1/4 -right-12 w-48 h-48 bg-gradient-to-l from-pink-300/50 to-rose-300/50 rounded-full blur-xl"
-          animate={{ y: [0, 30, 0] }}
-          transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1, y: [0, 30, 0] }}
+          transition={{ opacity: { duration: 0.5 }, scale: { duration: 0.5 }, y: { duration: 7, repeat: Infinity, ease: "easeInOut" } }}
         />
         
         {/* Brush strokes decoration */}

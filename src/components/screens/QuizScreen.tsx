@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useState, useMemo } from 'react';
+import { motion, AnimatePresence, LayoutGroup } from 'framer-motion';
 import type { QuizAnswer, CharacterType } from '@/pages/Index';
 
 interface QuizScreenProps {
@@ -154,60 +154,165 @@ const QuizScreen = ({ onComplete }: QuizScreenProps) => {
   const progress = ((currentQuestion + 1) / questions.length) * 100;
 
   // Shuffle option order for each question to make it more fair
-  const shuffledOptions = [...question.options].sort(() => Math.random() - 0.5);
+  // Use useMemo to prevent re-shuffling on every render
+  const shuffledOptions = useMemo(
+    () => [...question.options].sort(() => Math.random() - 0.5),
+    [currentQuestion]
+  );
+
+  // Define multiple position sets for shapes to rotate through
+  const positionSets = useMemo(() => [
+    // Set 0 - original positions
+    [
+      { top: '8%', left: '8%' },
+      { top: '12%', right: '10%' },
+      { bottom: '15%', left: '12%' },
+      { top: '45%', left: '5%' },
+      { bottom: '20%', right: '8%' },
+      { top: '25%', right: '25%' },
+      { bottom: '30%', left: '35%' },
+      { top: '60%', right: '15%' },
+    ],
+    // Set 1 - alternate positions
+    [
+      { top: '15%', right: '18%' },
+      { bottom: '25%', left: '8%' },
+      { top: '50%', right: '10%' },
+      { bottom: '35%', right: '20%' },
+      { top: '20%', left: '15%' },
+      { bottom: '18%', left: '30%' },
+      { top: '35%', right: '8%' },
+      { top: '10%', left: '25%' },
+    ],
+  ], []);
+
+  // Get current position set based on question
+  const currentPositions = positionSets[currentQuestion % 2];
 
   return (
     <div className="min-h-screen relative flex flex-col bg-gradient-to-b from-background via-soft-pink/20 to-background">
       {/* Decorative geometric shapes - character colors */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <LayoutGroup>
         {/* Yellow circle - top left */}
-        <motion.div 
-          className="absolute top-[8%] left-[8%] w-16 h-16 md:w-24 md:h-24 bg-char-outgoing/40 rounded-full"
-          animate={{ scale: [1, 1.15, 1] }}
-          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+        <motion.div
+          layoutId="shape-0"
+          className="absolute w-16 h-16 md:w-24 md:h-24 bg-char-outgoing/40 rounded-full"
+          style={currentPositions[0]}
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: [1, 1.15, 1] }}
+          transition={{ 
+            opacity: { duration: 0.5 }, 
+            scale: { duration: 5, repeat: Infinity, ease: "easeInOut" },
+            layout: { duration: 0.6, ease: "easeOut" }
+          }}
+          layout
         />
         {/* Pink rounded square - top right */}
-        <motion.div 
-          className="absolute top-[12%] right-[10%] w-14 h-14 md:w-20 md:h-20 bg-char-creative/35 rounded-2xl rotate-12"
-          animate={{ rotate: [12, 20, 12] }}
-          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+        <motion.div
+          className="absolute w-14 h-14 md:w-20 md:h-20 bg-char-creative/35 rounded-2xl rotate-12"
+          style={currentPositions[1]}
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1, rotate: [12, 20, 12] }}
+          transition={{ 
+            opacity: { duration: 0.5 }, 
+            scale: { duration: 0.5 }, 
+            rotate: { duration: 6, repeat: Infinity, ease: "easeInOut", delay: 0.5 },
+            layout: { duration: 0.6, ease: "easeOut" }
+          }}
+          layout
+          layoutId="shape-1"
         />
         {/* Green circle - bottom left */}
-        <motion.div 
-          className="absolute bottom-[15%] left-[12%] w-12 h-12 md:w-18 md:h-18 bg-char-empathetic/40 rounded-full"
-          animate={{ y: [0, -10, 0] }}
-          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+        <motion.div
+          className="absolute w-12 h-12 md:w-18 md:h-18 bg-char-empathetic/40 rounded-full"
+          style={currentPositions[2]}
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1, y: [0, -10, 0] }}
+          transition={{ 
+            opacity: { duration: 0.5 }, 
+            scale: { duration: 0.5 }, 
+            y: { duration: 4, repeat: Infinity, ease: "easeInOut" },
+            layout: { duration: 0.6, ease: "easeOut" }
+          }}
+          layout
+          layoutId="shape-2"
         />
         {/* Peach oval - middle left */}
-        <motion.div 
-          className="absolute top-[45%] left-[5%] w-10 h-14 md:w-14 md:h-20 bg-char-calm/45 rounded-full"
-          animate={{ scale: [1, 1.1, 1] }}
-          transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+        <motion.div
+          className="absolute w-10 h-14 md:w-14 md:h-20 bg-char-calm/45 rounded-full"
+          style={currentPositions[3]}
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: [1, 1.1, 1] }}
+          transition={{ 
+            opacity: { duration: 0.5 }, 
+            scale: { duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 },
+            layout: { duration: 0.6, ease: "easeOut" }
+          }}
+          layout
+          layoutId="shape-3"
         />
         {/* Purple square - bottom right */}
-        <motion.div 
-          className="absolute bottom-[20%] right-[8%] w-14 h-14 md:w-20 md:h-20 bg-char-achiever/35 rounded-xl rotate-6"
-          animate={{ rotate: [6, 14, 6] }}
-          transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}
+        <motion.div
+          className="absolute w-14 h-14 md:w-20 md:h-20 bg-char-achiever/35 rounded-xl rotate-6"
+          style={currentPositions[4]}
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1, rotate: [6, 14, 6] }}
+          transition={{ 
+            opacity: { duration: 0.5 }, 
+            scale: { duration: 0.5 }, 
+            rotate: { duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 0.8 },
+            layout: { duration: 0.6, ease: "easeOut" }
+          }}
+          layout
+          layoutId="shape-4"
         />
         {/* Small yellow square - top center-right */}
-        <motion.div 
-          className="absolute top-[25%] right-[25%] w-8 h-8 md:w-12 md:h-12 bg-char-outgoing/30 rounded-lg rotate-45"
-          animate={{ rotate: [45, 55, 45] }}
-          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+        <motion.div
+          className="absolute w-8 h-8 md:w-12 md:h-12 bg-char-outgoing/30 rounded-lg rotate-45"
+          style={currentPositions[5]}
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1, rotate: [45, 55, 45] }}
+          transition={{ 
+            opacity: { duration: 0.5 }, 
+            scale: { duration: 0.5 }, 
+            rotate: { duration: 4, repeat: Infinity, ease: "easeInOut" },
+            layout: { duration: 0.6, ease: "easeOut" }
+          }}
+          layout
+          layoutId="shape-5"
         />
         {/* Small pink circle - bottom center */}
-        <motion.div 
-          className="absolute bottom-[30%] left-[35%] w-10 h-10 md:w-14 md:h-14 bg-char-creative/25 rounded-full"
-          animate={{ y: [0, -8, 0] }}
-          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
+        <motion.div
+          className="absolute w-10 h-10 md:w-14 md:h-14 bg-char-creative/25 rounded-full"
+          style={currentPositions[6]}
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1, y: [0, -8, 0] }}
+          transition={{ 
+            opacity: { duration: 0.5 }, 
+            scale: { duration: 0.5 }, 
+            y: { duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1.5 },
+            layout: { duration: 0.6, ease: "easeOut" }
+          }}
+          layout
+          layoutId="shape-6"
         />
         {/* Green rounded rectangle - right side */}
-        <motion.div 
-          className="absolute top-[60%] right-[15%] w-8 h-12 md:w-12 md:h-18 bg-char-empathetic/30 rounded-xl -rotate-12"
-          animate={{ rotate: [-12, -6, -12] }}
-          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+        <motion.div
+          className="absolute w-8 h-12 md:w-12 md:h-18 bg-char-empathetic/30 rounded-xl -rotate-12"
+          style={currentPositions[7]}
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1, rotate: [-12, -6, -12] }}
+          transition={{ 
+            opacity: { duration: 0.5 }, 
+            scale: { duration: 0.5 }, 
+            rotate: { duration: 5, repeat: Infinity, ease: "easeInOut", delay: 2 },
+            layout: { duration: 0.6, ease: "easeOut" }
+          }}
+          layout
+          layoutId="shape-7"
         />
+        </LayoutGroup>
       </div>
 
       {/* Progress bar */}
