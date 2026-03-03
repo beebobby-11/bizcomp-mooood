@@ -9,6 +9,16 @@ import serenyImg from '@/assets/characters/Sereny.gif';
 import zenImg from '@/assets/characters/Zen.gif';
 import champyImg from '@/assets/characters/Champy.gif';
 
+// Import drink images
+import jollyDrink from '@/assets/drinks/jolly.png';
+import museDrink from '@/assets/drinks/Muse.png';
+import serenyDrink from '@/assets/drinks/Sereny.png';
+import zenDrink from '@/assets/drinks/Zen.png';
+import champyDrink from '@/assets/drinks/Champy.png';
+
+// Import MOOOOD logo
+import moooodLogo from '@/assets/characters/Your paragraph text (5).svg';
+
 interface ResultScreenProps {
   result: CharacterResult;
   onContinue: () => void;
@@ -20,6 +30,14 @@ const characterImages: Record<CharacterType, string> = {
   empathetic: serenyImg,
   calm: zenImg,
   achiever: champyImg,
+};
+
+const drinkImages: Record<CharacterType, string> = {
+  outgoing: jollyDrink,
+  creative: museDrink,
+  empathetic: serenyDrink,
+  calm: zenDrink,
+  achiever: champyDrink,
 };
 
 const characterStyles: Record<CharacterType, {
@@ -258,24 +276,23 @@ const ResultScreen = ({ result, onContinue }: ResultScreenProps) => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
           >
-            <p className="text-sm font-display tracking-widest text-foreground/70 uppercase mb-3">
-              🍃 Your Perfect Match 🍃
-            </p>
-            <div className="space-y-2">
-              {result.productList.map((product, index) => (
-                <motion.div
-                  key={index}
-                  className="bg-white/40 backdrop-blur-sm rounded-2xl px-4 py-3"
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.4, delay: 0.6 + index * 0.1 }}
-                >
-                  <h3 className="text-lg md:text-xl font-display font-bold text-foreground">
-                    {product}
-                  </h3>
-                </motion.div>
-              ))}
+            <div className="text-sm font-display tracking-widest text-foreground/70 uppercase mb-3 flex items-center justify-center gap-2">
+              <span>🍃 Your Perfect</span>
+              <img src={moooodLogo} alt="MOOOOD" className="inline-block h-4" />
+              <span>🍃</span>
             </div>
+            <motion.div
+              className="flex justify-center"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.4, delay: 0.6 }}
+            >
+              <img 
+                src={drinkImages[result.type]} 
+                alt={`${result.characterName} drink`}
+                className="w-full max-w-xs h-auto object-contain rounded-2xl"
+              />
+            </motion.div>
           </motion.div>
         </div>
 
