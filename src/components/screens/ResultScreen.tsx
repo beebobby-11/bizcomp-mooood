@@ -253,7 +253,7 @@ const ResultScreen = ({ result, onContinue }: ResultScreenProps) => {
 
           {/* Product match */}
           <motion.div
-            className={`bg-gradient-to-r ${styles.gradient} rounded-3xl p-5 max-w-md w-full text-center shadow-lg`}
+            className="bg-[#FFF1D7] rounded-3xl p-5 max-w-md w-full text-center shadow-lg"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
