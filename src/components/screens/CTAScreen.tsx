@@ -72,23 +72,23 @@ const CTAScreen = ({ onBack }: CTAScreenProps) => {
             March Showcase
           </p>
           
-          <h1 className="text-4xl md:text-6xl font-display font-bold text-foreground mb-6 leading-tight">
+          <h1 className="text-2xl md:text-4xl font-display font-bold text-foreground mb-6 leading-tight">
             Meet the
             <span className="text-char-creative"> Club</span>.
             <br />
             Taste the
-            <img src={moooodLogo} alt="MOOOOD" className="inline-block h-12 md:h-16 ml-2 align-middle" />!
+            <img src={moooodLogo} alt="MOOOOD" className="inline-block h-10 md:h-12 ml-2 align-middle" />!
           </h1>
 
           {/* Event Details */}
           <div className="mb-8 space-y-2">
-            <p className="text-2xl md:text-4xl font-display font-semibold text-foreground">
+            <p className="text-4xl md:text-6xl font-semibold text-foreground" style={{ fontFamily: 'Fastelar, sans-serif' }}>
               The RealBiz Exhibition
             </p>
-            <p className="text-xl md:text-3xl font-display tracking-wide text-foreground/90 uppercase font-bold">
+            <p className="text-base md:text-xl font-display tracking-wide text-foreground/90 uppercase font-bold">
               WHERE <span className="text-char-creative">IDEAS</span> BECOME REAL <span style={{ color: '#e8662a' }}>BUSINESS</span>
             </p>
-            <p className="text-lg md:text-2xl font-display text-foreground font-semibold">
+            <p className="text-xl md:text-3xl font-display text-foreground font-semibold">
               <span className="font-bold">29 March 2026</span> from 13:00–17:00
             </p>
             <p className="text-sm md:text-base font-body text-foreground/80 font-semibold">
@@ -124,22 +124,6 @@ const CTAScreen = ({ onBack }: CTAScreenProps) => {
           >
             REGISTER FOR EVENT
           </Button>
-          
-          {/* Reward info card */}
-          <motion.div 
-            className="bg-white/70 backdrop-blur-sm rounded-2xl p-5 max-w-sm border border-white/50 shadow-lg"
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.7 }}
-          >
-            <p className="text-base font-display text-foreground/90 mb-1">
-              <span className="font-bold">Exclusive Reward!</span>
-            </p>
-            <p className="text-sm font-body text-foreground/60 leading-relaxed">
-              Show your result screen at our booth to get a free 
-              <span className="font-semibold text-foreground/80"> Mooood × BizComp Exclusive souvenir!</span>
-            </p>
-          </motion.div>
         </motion.div>
 
         {/* Brand footer */}

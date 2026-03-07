@@ -210,7 +210,7 @@ const ResultScreen = ({ result, onContinue }: ResultScreenProps) => {
             <motion.img
               src={characterImage}
               alt={result.characterName}
-              className="relative w-80 h-80 md:w-[28rem] md:h-[28rem] object-contain drop-shadow-2xl ml-8 md:ml-12"
+              className="relative w-80 h-80 md:w-[28rem] md:h-[28rem] object-contain drop-shadow-2xl ml-4 md:ml-6"
               animate={{ y: [-5, 5, -5] }}
               transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
             />
@@ -274,12 +274,28 @@ const ResultScreen = ({ result, onContinue }: ResultScreenProps) => {
           </motion.div>
         </div>
 
+        {/* Reward info card */}
+        <motion.div 
+          className="bg-white/70 backdrop-blur-sm rounded-2xl p-5 max-w-sm mx-auto border border-white/50 shadow-lg mt-4 text-center"
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, delay: 0.7 }}
+        >
+          <p className="text-base font-display text-foreground/90 mb-1">
+            <span className="font-bold">Exclusive Reward!</span>
+          </p>
+          <p className="text-sm font-body text-foreground/60 leading-relaxed">
+            Show your result screen at our booth to get a free 
+            <span className="font-semibold text-foreground/80"> Mooood × BizComp Exclusive souvenir!</span>
+          </p>
+        </motion.div>
+
         {/* Actions */}
         <motion.div
           className="flex flex-col gap-3 mt-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.7 }}
+          transition={{ duration: 0.8, delay: 0.9 }}
         >
           <Button 
             variant="hero" 

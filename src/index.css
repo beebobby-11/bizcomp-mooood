@@ -10,6 +10,14 @@
   font-style: normal;
 }
 
+/* Import Fastelar font */
+@font-face {
+  font-family: 'Fastelar';
+  src: url('./fastelar-font/FastelarDemoRegular-lx4oV.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* Remove white background from character images */
 @layer utilities {
   .character-transparent {
